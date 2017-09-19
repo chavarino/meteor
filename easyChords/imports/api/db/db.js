@@ -32,6 +32,10 @@ if(Meteor.isServer)
 
 		return Conciertos.find();
 	});
+	Meteor.publish('users', function(){
+
+		return Meteor.users.find({_id : Meteor.userId()}, { fields : {isAdmin : 1}});
+	});
 
 
 }
@@ -40,22 +44,29 @@ Meteor.methods(
 	{
 		'usuarioAutorizado' () 
 		{
-			const privilegioMax = "admin";
-
-				if(Meteor.userId()){
-				var privilegioUsuario = UsuarioPrivilegios.findOne({usuario : Meteor.userId()});
-
-				var privilegioAdmin = Privilegios.findOne({privilegio : privilegioMax});
-
-				if (angular.isUndefined(privilegioUsuario)  || angular.isUndefined(privilegioAdmin))
-				 return false;
-
-
-				return ((privilegioUsuario.privilegio.equals(privilegioAdmin._id)) ? true : false);
-
-			}
 			
-			return false;
+				if(Meteor.userId()){
+				/*var privilegioUsuario = UsuarioPrivilegios.findOne({usuario : Meteor.userId()});
+
+				var privilegioAdmin = Privilegios.findOne({privilegio : privilegioMax});*/
+
+				
+
+					if (angular.isUndefined(Meteor.user()))
+					 return false;
+
+
+					var isAdmin = Meteor.user().isAdmin;
+
+					if (angular.isUndefined(isAdmin))
+					 return false;
+
+
+					return isAdmin;
+
+				}
+				
+				return false;
 		}
 		,
 		'insertarConcierto' (conc) {
@@ -68,15 +79,15 @@ Meteor.methods(
 			check(conc.fecha, Date);
 
 			//TODO Nuevos campos.
-
-			if(Meteor.call('usuarioAutorizado'))
+			var isAdmin = Meteor.user().isAdmin;
+			if(isAdmin)
 			{
 				var schema = new SimpleSchema({ ciudad : {type: String},
 												sala: {type:String},		
 												fecha: {type: Date}
 				}); 
-				schema.validate(this.conciertoModel); 
-				Conciertos.insert(this.conciertoModel);
+				schema.validate(conc); 
+				Conciertos.insert(conc);
 
 			}
 			else {
@@ -89,7 +100,8 @@ Meteor.methods(
 		'borrarConcierto' (conc)
 		{
 
-			if(Meteor.call('usuarioAutorizado'))
+			var isAdmin = Meteor.user().isAdmin;
+			if(isAdmin)
 			{
 				/*var schema = new SimpleSchema({ ciudad : {type: String},
 												sala: {type:String},		

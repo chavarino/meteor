@@ -3,7 +3,7 @@
         <h2 class='classPadding'>PRÓXIMOS CONCIERTOS</h2>
        <table>
         <tr  ng-repeat="conc in $ctrl.conciertosProximos">
-          <td ng-show="$ctrl.usuarioAutorizado()">
+          <td ng-show="$ctrl.usuarioAutorizado">
             <button class="delete" ng-click="$ctrl.borrarConcierto(conc)">&times;</button></td>
           <td class='tdFecha'>
             <!---<a  target="content" href="http://cautivarteatro.weebly.com/uploads/4/7/1/5/47158819/8556033.jpg?461">sdsds</a> -->
@@ -14,7 +14,7 @@
              <h3>{{conc.ciudad}}</h3>
           
           </td>
-                     <td >
+                     <td id="sala">
             <!---<a  target="content" href="http://cautivarteatro.weebly.com/uploads/4/7/1/5/47158819/8556033.jpg?461">sdsds</a> -->
            
              <h4>{{conc.sala}}</h4>
@@ -24,7 +24,7 @@
           </td>
         </tr>
        </table>
-       <div ng-show="$ctrl.usuarioAutorizado()">
+       <div ng-show="$ctrl.usuarioAutorizado">
         <h3>Formulario para insertar concierto</h3>
          <form ng-submit='$ctrl.insertarConcierto()' >
         <input ng-model="$ctrl.conciertoModel.ciudad" type="text" name="CiudadTxt" placeholder="Ciudad"  ng-required="true">
@@ -40,7 +40,7 @@
         <h2 class='classPadding'>CONCIERTOS PASADOS</h2>
        <table>
         <tr  ng-repeat="conc in $ctrl.conciertosPasados">
-          <td ng-show="$ctrl.usuarioAutorizado()">
+          <td ng-show="$ctrl.usuarioAutorizado">
             <button class="delete" ng-click="$ctrl.borrarConcierto(conc)">&times;</button></td>
            <td class='tdFecha'>
             <!---<a  target="content" href="http://cautivarteatro.weebly.com/uploads/4/7/1/5/47158819/8556033.jpg?461">sdsds</a> -->

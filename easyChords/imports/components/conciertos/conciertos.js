@@ -17,6 +17,7 @@ class ConciertosCtrl {
 		$scope.viewModel(this);
 
 		this.subscribe('conciertos');
+		this.subscribe('users');
 
 		this.helpers({
 			conciertosProximos()
@@ -29,6 +30,54 @@ class ConciertosCtrl {
 			{
 				return Conciertos.find({ fecha : {$lt : new Date()}},
 					 {sort : { fecha : -1}});
+			},
+			usuarioAutorizado()
+			{
+
+				/*const privilegioMax = "admin";
+
+				if(Meteor.userId()){
+					var privilegioUsuario = UsuarioPrivilegios.findOne({usuario : Meteor.userId()});
+
+					var privilegioAdmin = Privilegios.findOne({privilegio : privilegioMax});
+
+					if (angular.isUndefined(privilegioUsuario)  || angular.isUndefined(privilegioAdmin))
+					 return false;
+
+
+					return ((privilegioUsuario.privilegio.equals(privilegioAdmin._id)) ? true : false);
+
+				}
+				
+				return false;*/
+
+
+
+
+				if(Meteor.userId()){
+				/*var privilegioUsuario = UsuarioPrivilegios.findOne({usuario : Meteor.userId()});
+
+				var privilegioAdmin = Privilegios.findOne({privilegio : privilegioMax});*/
+
+				
+
+					if (angular.isUndefined(Meteor.user()))
+					 return false;
+
+
+					var isAdmin = Meteor.user().isAdmin;
+
+					if (angular.isUndefined(isAdmin))
+					 return false;
+
+
+					return isAdmin;
+
+				}
+				
+				return false;
+
+
 			}
 
 
@@ -74,28 +123,7 @@ class ConciertosCtrl {
 		}
 	}
 
-	usuarioAutorizado()
-	{
 
-					const privilegioMax = "admin";
-
-				if(Meteor.userId()){
-				var privilegioUsuario = UsuarioPrivilegios.findOne({usuario : Meteor.userId()});
-
-				var privilegioAdmin = Privilegios.findOne({privilegio : privilegioMax});
-
-				if (angular.isUndefined(privilegioUsuario)  || angular.isUndefined(privilegioAdmin))
-				 return false;
-
-
-				return ((privilegioUsuario.privilegio.equals(privilegioAdmin._id)) ? true : false);
-
-			}
-			
-			return false;
-
-
-	}
 
 			//
 	formateaMes(fecha)
