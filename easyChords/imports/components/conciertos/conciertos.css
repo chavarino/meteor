@@ -1,0 +1,94 @@
+/***EVENTS*/
+
+div#events, #media {
+    color: rgba(255,255,255,0.9);
+    font-size: x-large;
+    /* font-family: fantasy; */
+    font-family: 'Montserrat';
+    background-color: #333;
+    text-shadow: 0 0 0px black;
+        padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+   /* box-shadow: -1px 0px 2px 7px black;*/
+}
+
+
+
+table{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 100px;
+
+}
+
+.tdFecha {
+    /* width: 147px; */
+    /*padding-left: 25px;*/
+    width: 21%;
+    color: #ff4152;
+}
+
+td {
+    /* border: 2px solid rgba(0,0,0,.05); */
+   /* border: 2px solid rgba(0,0,0,.05);*/
+    /*border-radius: 100px;*/
+    /*background-color: black;*/
+    text-align: center;
+    color: grey;
+    
+}
+
+
+#events td {
+
+    border-bottom: 2px solid rgba(0,0,0,.05);
+}
+
+#info {
+    width: 139px;
+}
+#info div  {
+    /* border-radius: 1px; */
+    /*background: linear-gradient(to bottom, #faffff, #9a9595 100%);*/
+    color: grey;
+    /*background-color: white;*/
+    width: 139px;
+    height: 100%;
+    /*border: 0px;*/
+    border: 2px solid white;
+    margin: 3px;
+   /* border-radius: 10px;*/
+    /* margin-left: 10px; */
+    /* margin-right: 79px; */
+    /*border-bottom: 0px !important;*/
+}
+#localidad {
+
+    color: white;
+}
+.margin-bottom-class
+{
+
+/*border-bottom: 2px solid rgba(0,0,0,.08);*/
+
+}
+
+#ProxEvents td.tdFecha {
+    color: #52a961;
+}
+#ProxEvents, #PastEvents {
+    padding-right: 10px;
+}
+
+/* links cuando pasa el raton por encima*/
+#info div:hover {
+    box-shadow: 0 0 47px white;
+    color: green;
+    background: white;/*linear-gradient(to bottom, #faffff, #9a9595 100%);*/
+}
+
+#info a {
+    text-decoration: none;
+}
