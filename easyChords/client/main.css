@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat';
-    background-color: #333333;
+    background-color: #21102a;/*#333333;*/
     /*background-image: linear-gradient(to bottom, #0f1010, #d6d5d2 100%);
     background-attachment: fixed;*/
  
@@ -12,9 +12,11 @@ body {
  
     padding: 0;
     margin: 0;
- 
+    max-width: 100%;
     /*font-size: 14px;*/
 }
+
+
 
 .container {
     max-width: 100%;
@@ -48,13 +50,14 @@ body {
 
 .contHead {
 	position: relative;
-	height: 900px;
+	height: 200px;
+  min-height: 200px;
 }
 
 #head1 {
     background-image: url(http://cdn.pcwallart.com/images/a-day-to-remember-albums-wallpaper-3.jpg);
     /* background-attachment: fixed; */
-    background-size: 100% 100%;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
@@ -79,12 +82,14 @@ body {
 }
 
 .logo h1 {
-    font-size: 238px;
+    font-size: 80px;
     color: #eaeaea;
 
     /* width: 112px; */
-    margin-right: 20%;
+    float: center;
     vertical-align: middle;
+   margin-right: 20%;
+
     margin-left: 20%;
     position: absolute;
     /* top: 86%; */
@@ -127,7 +132,14 @@ body {
 
 }
 
-.menu div {
+.menu  * {
+  box-sizing: unset ;
+ 
+}
+
+
+
+.menu #navTop {
       text-align: right;
      margin: 0 auto;
     
@@ -135,7 +147,12 @@ body {
     height: 50px;
     margin-bottom: 5px;
   }
-
+#navTop a:first-child
+{
+  float:  left;
+  margin: 5px;
+  padding:5px;
+}
 
 all {
     font-family: 'Montserrat' !important;
@@ -145,16 +162,19 @@ all {
 .classPadding{
 
    /* padding:*/
-       padding: 10px 10px 0px 14px;
+       padding: 5px;
 }
 
 /*SECCION VIDEO*/
 
-#videoTitle{
 
-    width: 100%
-
+#videoTitle h2 {
+    margin: 0px;
+    padding: 0px;
+    /* height: 36px; */
+    margin-left: 5%;
 }
+
 
 div#container * {
     font-size: 20px !important;
@@ -174,6 +194,8 @@ div#container * {
   font-family: 'Open Sans';
   font-weight: bold;
   margin-right: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
 
 
 }
@@ -182,17 +204,21 @@ div#container * {
 }
 /**ICONOS**/
 
+
+
+
 .fa {
   /*padding: 10px;*/
-  font-size: 20px !important;
-  width: 20px;
+  font-size: 20px ;
+  width: 30px;
+
   padding: 5px;
-  text-align: center;
+  text-align: center !important;
   text-decoration: none;
-  margin: 10px 10px;
+  margin: 5px 5px;
   border-radius: 40px;
   border: 2px solid #060606;
-  background: #060606;
+  
 }
 
 .fa:hover {
@@ -210,11 +236,27 @@ div#container * {
 
 .fa-twitter {
   /*background: #55ACEE;*/
-  background: #060606;
+  /*background: #060606;*/
   color: white;
 }
+.fa-menu {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 30px !important;
+    background: #060606;
+   color: white!important;
+}
 
+.fa-times{
 
+      width: 30px !important;
+  
+   color: white!important;
+}
 
 .fa-youtube {
   /*background: black;*/
@@ -233,18 +275,239 @@ div#container * {
 
 
 #media {
-
+  
   text-align:  left;
 }
 
 
-div#media {
-    padding-left: 150px;
-    padding-right: 10px;
+
+
+div#events, #media {
+    color: rgba(255,255,255,0.9);
+    font-size: x-large;
+    /* font-family: fantasy; */
+    font-family: 'Montserrat';
+    background-color: #21102a;
+    text-shadow: 0 0 0px black;
+    /*padding-top: 50px;
+    padding-bottom: 50px;*/
+       /* padding-left: 200px;
+    padding-right: 5;
+    padding-top: 50px;
+    padding-bottom: 50px;*/
+   /* box-shadow: -1px 0px 2px 7px black;*/
 }
 
-iframe#spoty {
-    margin-left: 100px;
-    margin-bottom: 110px;
+
+
+* {
+    box-sizing: border-box;
 }
 
+
+
+
+[class*="col-"] {
+  /* float: left;*/
+    padding: 15px;
+
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.see-mob{
+
+display: inline-block!important;
+
+}
+.seeNav{
+
+  display: block!important;
+}
+.see-desk{
+  display: none!important;
+}
+
+
+.size-mob{
+  
+   font-size: 30px !important ;
+}
+
+#navMob {
+    content: "";
+    clear: both;
+    width: 100%;
+    height: 100%;
+    background: #060606;
+    z-index: 1;
+    position: fixed;
+    padding:  auto;
+
+}
+#navMob *{
+  color: white!important;
+  display: block !important;
+  text-align: left;
+  float: left;
+  z-index: 50;
+  font-size: 30px !important;
+}
+#navMob > *{
+    
+    width: 100%;
+    color: white!important;
+    margin-left: 4%;
+    margin-top: 8px;
+    padding: 5px;
+   
+  
+}
+
+#navMob div a:first-child{
+  margin-left: 0px;
+
+}
+
+#navMob > a:hover {
+  opacity: 0.4;
+
+}
+
+#div-video{
+ text-align: center;
+}
+
+ #video {
+
+    width:300px;/*400px; */
+    height:168.25px;
+    /*width:900px;
+     height:auto;*/
+  }
+
+#videoTitle, #PastEvents h2, #ProxEvents h2 {
+  background: black;
+  margin: 0px;
+  height: min-content;
+  border-radius: 100px;
+}
+ #PastEvents h2, #ProxEvents h2 {
+  
+  border-radius: 0px;
+}
+
+@media screen and (min-width: 400px){
+
+.logo h1 {
+    font-size: 100px;
+ 
+}
+   #video {
+
+    width:400px;/*400px; */
+    height:225px;
+    /*width:900px;
+     height:auto;*/
+  }
+}
+@media screen and (min-width: 768px) {
+
+
+#videoTitle h2 {
+    margin-left: 5%;
+    
+  
+  
+    border-radius: 5px;
+    /* padding-top: 28px; */
+    padding: 10px;
+}
+
+  .contHead {
+
+  height: 700px;
+}
+   
+
+.fa {
+  /*padding: 10px;*/
+  height: auto;
+width: 20px;
+  margin: 5px 5px;
+
+  
+}
+
+.logo h1 {
+    font-size: 238px;
+  }
+
+#navTop a:first-child
+{
+  float:  none;
+
+}
+.see-mob{
+
+display: none!important;
+
+}
+
+.see-desk{
+  display: inline-block!important;
+}
+.menu div {
+  margin: auto;
+}
+
+.size-mob{
+  
+   font-size: 16px !important ;
+}
+
+
+    .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  .menu  * {
+    box-sizing: unset ;
+ 
+}
+
+  #video {
+
+  
+
+    width:906px; 
+    height:509.625px;
+    /*width:900px;
+     height:auto;*/
+  }
+
+
+  .logo h1 {
+   
+    margin-right: 20%;
+    vertical-align: middle;
+    margin-left: 20%;
+   
+}
+
+}
+
+}

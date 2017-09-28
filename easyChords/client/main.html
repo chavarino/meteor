@@ -1,34 +1,61 @@
-<head>
+
+<head ng-app="easyChords">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <title>easyChords</title>
-  <div class='menu'>
-    <div>
-        <a href="#head1" class="item menuItem">INICIO</a>
-        <a href="#media" class="item menuItem">MEDIA</a>
-        <a href="#events" class="item menuItem">CONCIERTOS</a>
-        <a href="#" title="facebook" class="menuItem fa fa-facebook"></a>
-        <a href="#" title="twitter" class="fa fa-twitter"></a>
-        <a href="#" title="youtube" class="fa fa-youtube"></a>
-        <a href="#" title="instagram" class="fa fa-instagram"></a>
+  
+</head>
+<body class='marginClass' ng-app="easyChords">
+  <div class='menu' ng-controller="controllerApp">
+    <div id="navTop" >
+        <a href="#head1" class="item menuItem see-desk">INICIO</a>
+        <a href="#media" class="item menuItem see-desk">MEDIA</a>
+        <a href="#events" class="item menuItem see-desk">CONCIERTOS</a>
+        <a href="#" title="facebook" class="menuItem fa fa-facebook see-desk"></a>
+        <a href="#" title="twitter" class="fa fa-twitter see-desk"></a>
+        <a href="#" title="youtube" class="fa fa-youtube see-desk"></a>
+        <a href="#" title="instagram" class="fa fa-instagram see-desk"></a>
+        <a href="#" ng-if="navDesplegado==false" ng-click="desplegarMenuMobil()" title="Menú" class="fa fa-menu see-mob size-mob">&#xf0c9;</a>
+        <a href="#" ng-if="navDesplegado==true" ng-click="desplegarMenuMobil()"  class="fa fa-times see-mob size-mob"></a>
+
+        
   </div>
 
+  <div id="navMob" class="see-mob seeNav" ng-if="navDesplegado==true">
+        <a href="#head1" ng-click="desplegarMenuMobil()" class="item menuItem size-mob">INICIO</a>
+        <a href="#media" ng-click="desplegarMenuMobil()" class="item menuItem see-desk">MEDIA</a>
+        <a href="#events" ng-click="desplegarMenuMobil()" class="item menuItem see-desk">CONCIERTOS</a>
+        <div>
+           <a href="#" title="facebook" class="menuItem fa fa-facebook see-desk"></a>
+          <a href="#" title="twitter" class="fa fa-twitter see-desk"></a>
+          <a href="#" title="youtube" class="fa fa-youtube see-desk"></a>
+          <a href="#"  title="instagram" class="fa fa-instagram see-desk"></a>
+        </div>
+
+  </div>
     
   </div>
-</head>
-<body class='marginClass'>
-  <div class="container" ng-app="easyChords">
+  <div class="container" >
     <div class='contHead'>
       <div id='head1'></div>
-      <div class='logo'><!--<img  src="https://pbs.twimg.com/profile_images/596230601167994880/w4k-ycL9.jpg">-->
+      <div class='logo col-12'><!--<img  src="https://pbs.twimg.com/profile_images/596230601167994880/w4k-ycL9.jpg">-->
         <h1>CHAVACAN</h1></div>
     </div>
   <div id='pag'>
     <user-login></user-login>
-<div id="media" class="classPadding">
-  <div id="videoTitle"><h2 class='classPadding'>MEDIA</h2></div>
+<div id="media" class="col-12">
+  <div id="videoTitle" class="col-12"><h2 class='classPadding'>MEDIA</h2></div>
+  <!--width="906" height="509.625"-->
+  <div id="div-video" class="col-12">
+    <iframe  id="video"  src="https://www.youtube.com/embed/UxvVH1M6Zs0?autoplay=1" frameborder="0" allowfullscreen></iframe>
 
-    <iframe width="906" height="509.625" src="https://www.youtube.com/embed/UxvVH1M6Zs0?autoplay=1" frameborder="0" allowfullscreen></iframe>
-    <iframe id="spoty" src="https://open.spotify.com/embed?uri=spotify:album:4QdNmsZovX5Yr0SU2EiOse&theme=dark" width="300" height="400" frameborder="0" allowtransparency="true"></iframe>
+  </div>
+<!--<div class="col-2">
+      <iframe id="spoty"  src="https://open.spotify.com/embed?uri=spotify:album:4QdNmsZovX5Yr0SU2EiOse&theme=dark" width="300" height="400" frameborder="0" allowtransparency="true"></iframe>
+
+</div>-->
+
 
   </div>
 
