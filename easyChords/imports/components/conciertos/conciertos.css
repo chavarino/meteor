@@ -6,14 +6,14 @@
 table{
     width: 100%;
     text-align: left;
-    margin-bottom: 100px;
+    
 
 }
 
 .tdFecha {
     /* width: 147px; */
     /*padding-left: 25px;*/
-    width: 180px;
+    
     color: #ff4152;
 }
 
@@ -37,50 +37,74 @@ td {
     border-bottom: 2px solid rgba(0,0,0,.05);
 }
 
-#info {
-    width: 139px;
-}
+
 #info div  {
-    /* border-radius: 1px; */
-    /*background: linear-gradient(to bottom, #faffff, #9a9595 100%);*/
+
     color: grey;
-    /*background-color: white;*/
-    width: 139px;
+   
+    
     height: 100%;
     /*border: 0px;*/
     border: 2px solid white;
-    margin: 3px;
-   /* border-radius: 10px;*/
-    /* margin-left: 10px; */
-    /* margin-right: 79px; */
-    /*border-bottom: 0px !important;*/
+
 }
 #localidad {
-    width: 280px;
+   
 
     color: white;
 }
-.margin-bottom-class
-{
 
-/*border-bottom: 2px solid rgba(0,0,0,.08);*/
-
-}
 
 #ProxEvents td.tdFecha {
-    color: #52a961;
+    color: #6da1c7;
 }
-#ProxEvents, #PastEvents {
+/*#ProxEvents, #PastEvents {
     padding-right: 10px;
-}
+    padding-left: 15px;
+}*/
 
 /* links cuando pasa el raton por encima*/
 #info div:hover {
     box-shadow: 0 0 47px white;
-    color: green;
+    color: #6da1c7;
     background: white;/*linear-gradient(to bottom, #faffff, #9a9595 100%);*/
 }
 
+
+
+#ProxEvents #info div:hover {
+    box-shadow: 0 0 47px white;
+    color: #6da1c7;
+    background: white;/*linear-gradient(to bottom, #faffff, #9a9595 100%);*/
+}
+
+#PastEvents #info div:hover {
+    box-shadow: 0 0 47px white;
+    color: #69191e;
+    background: white;/*linear-gradient(to bottom, #faffff, #9a9595 100%);*/
+}
+
+
+
 #info a {
     text-decoration: none;
+}
+
+#PastEvents{
+
+    text-shadow: 3px 2px 56px #f91b1b;
+    /* background-color: white; */
+    box-shadow: 0 0 47px #c3c3c3;
+}
+
+#ProxEvents {
+    text-shadow: 3px 2px 56px #5d94b9;
+    /* background-color: white; */
+    box-shadow: 0 0 47px #c3c3c3;
+}
+
+iframe#video {
+    /* text-shadow: 54px 2px 56px #17a930; */
+    /* background-color: white; */
+    box-shadow: 0 0 47px #48628a;
 }
