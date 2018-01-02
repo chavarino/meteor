@@ -55,7 +55,7 @@ body {
 }
 
 /*#head1 {
-    background-image: url(source/saltoTren.jpg);
+    background-image: url(source/logoCHM.jpg);
     background-size: cover;/*cover;
      background-attachment: fixed; 
     background-repeat: no-repeat;
@@ -460,6 +460,42 @@ div#pag {
   height: auto;
 }
 
+
+#bio .texto h2.w3-wide, #grupo .texto h2.w3-wide{
+    border-radius: 5px;
+    color: cornflowerblue;
+    border: 1px solid white;
+    text-shadow: 3px 2px 56px #9abbce;
+    
+}
+.w3-opacity{
+  opacity: 0.7
+}
+#bio *, #grupo * {
+
+  color: white;
+  font-size: 30px;
+
+}
+
+
+#bio .texto .div-cont {
+    background-image: url(source/logoCHM.jpg);
+    background-size: cover;
+     background-attachment: fixed; 
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+#bio .texto .div-cont div {
+    background: black;
+    opacity: 0.8;
+    color: white;
+    height: 100%;
+}
 /******************************************************
 *******************************************************/
 /**Ordenador*/
