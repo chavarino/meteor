@@ -1,0 +1,185 @@
+
+<head ng-app="easyChords">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>easyChords</title>
+  
+</head>
+<body class='marginClass' ng-app="easyChords">
+  <div class='menu' ng-controller="controllerApp">
+    <div id="navTop" >
+        <a href="#head1" class="item menuItem see-desk">INICIO</a>
+        <a href="#media" class="item menuItem see-desk">MEDIA</a>
+        <a href="#events" class="item menuItem see-desk">CONCIERTOS</a>
+        <a href="#" title="facebook" class="menuItem fa fa-facebook see-desk"></a>
+        <a href="#" title="twitter" class="fa fa-twitter see-desk"></a>
+        <a href="#" title="youtube" class="fa fa-youtube see-desk"></a>
+        <a href="#" title="instagram" class="fa fa-instagram see-desk"></a>
+        <a href="#" ng-if="navDesplegado==false" ng-click="desplegarMenuMobil()" title="Menú" class="fa fa-menu see-mob size-mob">&#xf0c9;</a>
+        <a href="#" ng-if="navDesplegado==true" ng-click="desplegarMenuMobil()"  class="fa fa-times see-mob size-mob"></a>
+
+        
+  </div>
+
+  <div id="navMob" class="see-mob seeNav" ng-if="navDesplegado==true">
+        <a href="#head1" ng-click="desplegarMenuMobil()" class="item menuItem size-mob">INICIO</a>
+        <a href="#media" ng-click="desplegarMenuMobil()" class="item menuItem see-desk">MEDIA</a>
+        <a href="#events" ng-click="desplegarMenuMobil()" class="item menuItem see-desk">CONCIERTOS</a>
+        <div>
+           <a href="#" title="facebook" class="menuItem fa fa-facebook see-desk"></a>
+          <a href="#" title="twitter" class="fa fa-twitter see-desk"></a>
+          <a href="#" title="youtube" class="fa fa-youtube see-desk"></a>
+          <a href="#"  title="instagram" class="fa fa-instagram see-desk"></a>
+        </div>
+
+  </div>
+    
+  </div>
+  <div class="container" >
+    <div class='contHead '>
+      <div id='head1'>
+        <img src="source/saltoTren.jpg">
+      </div>
+      <div id='logo' class="row col-12">
+        <div class="col-1"></div>
+        <div class='col-10 divCenter'><!--<img  src="https://pbs.twimg.com/profile_images/596230601167994880/w4k-ycL9.jpg">-->
+          <h1>CHAVACAN</h1>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+  <div id='pag'>
+
+  <div id="bio" class="row col-12">
+     <div class="col-1"></div>
+        <div class='texto col-10 divCenter'><!--<img  src="https://pbs.twimg.com/profile_images/596230601167994880/w4k-ycL9.jpg">-->
+          <!--<div class=""><img class="logCHM" src="source/logoCHM.jpg"></div>-->
+          <h2 class="w3-wide">BIOGRAFÍA</h2>
+          <p class="w3-opacity"><i>"Amando la música"</i></p>
+
+          <div class="div-cont">
+            <div>
+               <p class="">
+
+                  Como un capitán sin navío, el 01 de octubre de 2014, Javier Chavarino, Chava para sus amigos. Decidió
+            empezar una nueva banda acorde con su forma de ser y su manera de ver la vida. Consiguió sacar
+            adelante “Reflexión demencial”, primer tema de la banda. El testigo fue recogido por Nacho Rubio
+            (guitarrista) y Santiago Llorente (batería), comenzando, junto a Chava a formar lo que hoy es Chavacan
+            Monsters.
+          </p>
+          <p>
+            Alejandro Sánchez, Sacha (bajista) se unió más tarde a los ensayos y con él vino Alejandro Posilio
+            (guitarrista). Rompiendo barreras y creando, una nueva banda. Tras dos años Sacha decidió seguir su
+            camino y dejo la banda con este suceso hubo dos incorporaciones Elías Sanchez ( teclista) y Fernando
+            Gallardo (bajista) que “decidió abrir las persianas y salir a recorrer las calles de Madrid llenándolas de
+            música y versos”.
+          </p>
+          <p>
+            En este momento disponen de 14 temas propios en total, todos ellos disponibles en youtube. Pronto
+            estarán disponibles nuevas canciones en las que están trabajando en estos momentos.
+          </p>
+          <p>
+            Además, y porque esta banda no se cansa jamás, A lo largo de estos años varias salas de conciertos de
+            Madrid han podido llenarse con los gritos chavacanos, así como el Festival de clipmetrajes de manos
+            unidas como banda sonora del clipmetraje «tú de qué lado estás» obteniendo el primer puesto a nivel
+            de la comunidad de Madrid. Han sido semifinalistas en el concurso de la Ume de Bandas emergentes y
+            en Ambar Export Rock and Roll. Los medios de comunicación no se quedan al margen, en estos dos años
+            han tenido la oportunidad de ser entrevistados y ofrecer un concierto en acústico para Radio Vallecas.
+
+          </p>
+           
+            </div>
+           
+
+          </div>
+          
+        </div>
+     <div class="col-1"></div>
+  </div>
+
+  <div id="grupo" class="row col-12">
+     <div class="col-1"></div>
+        <div class='texto col-10 divCenter'><!--<img  src="https://pbs.twimg.com/profile_images/596230601167994880/w4k-ycL9.jpg">-->
+          <!--<div class=""><img class="logCHM" src="source/logoCHM.jpg"></div>-->
+          <h2 class="w3-wide">LA BANDA</h2>
+          <p class="w3-opacity"><i>"Diferente no significa peor"</i></p>
+
+          <div class="div-cont">
+            <div>
+               <p class="m1">
+                  <h3 class="w3-wide">Javier Chavarino (Chava)</h3>
+                  <p class="w3-opacity"><i>"...¿Por qué luchar?..."</i></p>
+              </p>
+              <p class="m2">
+                  <h3 class="w3-wide">Alejandro Posilio (Posi)</h3>
+                  <p class="w3-opacity"><i>"...En honor a la verdad..."</i></p>
+              </p>
+              <p class="m3">
+                <h3 class="w3-wide">Ignacio Rubio (Nakio)</h3>
+                  <p class="w3-opacity"><i>"...Puedo llegar a ser lo que quiera..."</i></p>
+              </p>
+              <p class="m4">
+                <h3 class="w3-wide">Fernando Gallardo</h3>
+                  <p class="w3-opacity"><i>"...El mundo ya nubló su horizonte..."</i></p>
+
+              </p>
+              <p class="m5">
+                <h3 class="w3-wide">Elías Sachez</h3>
+                  <p class="w3-opacity"><i>"...Un lugar donde escapar..."</i></p>
+
+              </p>
+              <p class="m6">
+                <h3 class="w3-wide">Santiago Llorente</h3>
+                  <p class="w3-opacity"><i>"...hasta que la noche cierre..."</i></p>
+
+              </p>
+               
+            </div>
+           
+
+          </div>
+          
+        </div>
+     <div class="col-1"></div>
+  </div>
+   <!-- <user-login></user-login>-->
+<!--<div id="media" class="col-12">
+  <div id="videoTitle" class="col-12"><h2 class='classPadding'>MEDIA</h2></div>
+ 
+  <div id="div-video" class="col-12">
+    <iframe  id="video"  src="https://www.youtube.com/embed/UxvVH1M6Zs0?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+  </div>
+<div class="col-2">
+      <iframe id="spoty"  src="https://open.spotify.com/embed?uri=spotify:album:4QdNmsZovX5Yr0SU2EiOse&theme=dark" width="300" height="400" frameborder="0" allowtransparency="true"></iframe>
+
+</div>
+
+
+  </div>-->
+
+
+</div>
+
+       <!-- https://open.spotify.com/album/4QdNmsZovX5Yr0SU2EiOse-->
+ <!---
+  <div id='contFotos' class='marginClass'> 
+      <div id="cp_widget_7c62529b-a60b-4230-ba4b-183b7879eb8c">...</div><script type="text/javascript">
+var cpo = []; cpo["_object"] ="cp_widget_7c62529b-a60b-4230-ba4b-183b7879eb8c"; cpo["_fid"] = "A4LArHOoAQjF";
+var _cpmp = _cpmp || []; _cpmp.push(cpo);
+(function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+var c = document.getElementsByTagName("script")[0];
+c.parentNode.insertBefore(cp, c); })(); </script><noscript><span>New Gallery 2017/8/30</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1280</span><span>height</span><span> 1280</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>height</span><span> 744</span><span>width</span><span> 1360</span><span>orientation</span><span> 1</span><span>camerasoftware</span><span> Adobe Photoshop CC 2</span><span>focallength</span><span> 27</span><span>flash</span><span> 16</span><span>cameramake</span><span> Canon</span><span>height</span><span> 2848</span><span>fnumber</span><span> 4.5</span><span>exposuretime</span><span> 0.02</span><span>camerasoftware</span><span> Adobe Photoshop Came</span><span>originaldate</span><span> 12/6/2016 12:59:37 AM</span><span>width</span><span> 4272</span><span>cameramodel</span><span> Canon EOS 1100D</span><span>focallength</span><span> 4.5</span><span>flash</span><span> 16</span><span>cameramake</span><span> Canon</span><span>height</span><span> 960</span><span>fnumber</span><span> 3.8</span><span>exposuretime</span><span> 0.00625</span><span>camerasoftware</span><span> PhotoScape</span><span>originaldate</span><span> 1/31/2015 7:26:51 PM</span><span>width</span><span> 1280</span><span>cameramodel</span><span> Canon PowerShot SX60</span><span>focallength</span><span> 4.5</span><span>flash</span><span> 16</span><span>cameramake</span><span> Canon</span><span>height</span><span> 960</span><span>fnumber</span><span> 3.8</span><span>exposuretime</span><span> 0.00625</span><span>camerasoftware</span><span> PhotoScape</span><span>originaldate</span><span> 1/31/2015 7:26:51 PM</span><span>width</span><span> 1280</span><span>cameramodel</span><span> Canon PowerShot SX60</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>height</span><span> 454</span><span>width</span><span> 1994</span><span>camerasoftware</span><span> PhotoScape</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>height</span><span> 454</span><span>width</span><span> 1994</span><span>camerasoftware</span><span> PhotoScape</span><span>cameramake</span><span> SONY</span><span>orientation</span><span> 1</span><span>height</span><span> 2592</span><span>focallength</span><span> 1.15</span><span>camerasoftware</span><span> Microsoft Windows Ph</span><span>originaldate</span><span> 1/3/2015 10:05:10 PM</span><span>width</span><span> 1944</span><span>cameramodel</span><span> ST23i</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 816</span><span>height</span><span> 612</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>height</span><span> 908</span><span>width</span><span> 1409</span><span>camerasoftware</span><span> PhotoScape</span></noscript>
+
+
+  </div>-->
+
+    <conciertos></conciertos>
+
+  </div>
+  
+  
+</div>
+</body>
