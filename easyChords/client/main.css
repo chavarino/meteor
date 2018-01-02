@@ -478,7 +478,42 @@ div#pag {
 
 }
 
+.relativo {
+    position: relative;
+}
 
+.top-left {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+}
+.top-right {
+    position: absolute;
+    top: 6%;
+    right: 6%;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 6%;
+    right: 6%;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 6%;
+    left: 6%;
+}
+
+.border {
+  border: 1px solid white;
+}
+
+.tit-neg{
+   margin : 0px;
+    /*background: white;
+    color: black!important;*/
+}
 #bio .texto .div-cont {
     background-image: url(source/logoCHM.jpg);
     background-size: cover;
@@ -490,18 +525,55 @@ div#pag {
 
 }
 
+.opacity-6{
+  opacity: 0.6;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-left {
+  
+  
+  text-align: left !important;
+}
+
+#grupo  [class*="m-"].row img{
+
+      border-radius: 73px;
+    box-shadow: 0 0 37px #cec7c7;
+    margin-bottom: 50px
+}
+
+
 #bio .texto .div-cont div {
     background: black;
     opacity: 0.8;
     color: white;
     height: 100%;
 }
+
+footer h1 {
+  color : white;
+}
+
+footer p {
+  color : white;
+}
+
+footer a {
+  color : white;
+  font-size: 30px
+}
+/*[class*="m"]*/
+
 /******************************************************
 *******************************************************/
 /**Ordenador*/
 @media screen and (min-width: 768px) {
 
-
+.tit-neg{
+    font-size: 72px!important;
+}
 #videoTitle h2 {
     
     
